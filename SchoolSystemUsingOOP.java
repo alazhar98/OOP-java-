@@ -278,10 +278,9 @@ public class SchoolSystemUsingOOP {
             }
 
             if (student != null) {
-                // Find the book in the library
                 System.out.print("Enter book ID to assign to student: ");
                 int bookID = scanner.nextInt();
-                scanner.nextLine(); // Consume newline
+                scanner.nextLine();
                 List<Map<String, Object>> library = (List<Map<String, Object>>) schoolInfo.get("Library");
 
                 Map<String, Object> bookToAssign = null;
