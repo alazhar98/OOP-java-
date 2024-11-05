@@ -233,10 +233,8 @@ public class SchoolSystemUsingOOP {
             System.out.print("Enter availability status (available/unavailable): ");
             String availabilityStatus = scanner.nextLine();
 
-
             Map<String, Object> book = createBook(bookID, title, author, publicationYear, availabilityStatus);
 
-            // Add book to the library
             ((List<Map<String, Object>>) schoolInfo.get("Library")).add(book);
             System.out.println("Book added successfully.");
         } else {
@@ -268,9 +266,8 @@ public class SchoolSystemUsingOOP {
         if (schoolInfo != null) {
             System.out.print("Enter student ID: ");
             int studentID = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
-            // Find the student
             List<Map<String, Object>> students = (List<Map<String, Object>>) schoolInfo.get("Students");
             Map<String, Object> student = null;
             for (Map<String, Object> s : students) {
