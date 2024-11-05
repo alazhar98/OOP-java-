@@ -29,6 +29,7 @@ public class SchoolSystemUsingOOP {
             int choice = scanner.nextInt();
             scanner.nextLine();
 
+            //switch cases from the menu  
             switch (choice) {
                 case 1:
                     addSchools(schools, scanner);
