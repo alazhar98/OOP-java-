@@ -279,7 +279,7 @@ public class SchoolSystemUsingOOP {
     // ask user to enter student id
     // ask user to enter book id
     // assign that book to that student
-    //
+    // put the status of the book unavailable after assign 
     private static void assignBookToStudent(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name to assign book to student: ");
         String schoolName = scanner.nextLine();
