@@ -136,7 +136,7 @@ public class SchoolSystemUsingOOP {
     // ask user to enter school name that student want to add and check if there is school in this name
     // ask user to enter student name that subject want take and check if there is student in this name
     // ask user how many subject want to add for that student
-    
+    // ask user to enter  subject name and mark the student on this subject
     private static void addSubjects(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name: ");
         String schoolName = scanner.nextLine();
@@ -151,14 +151,14 @@ public class SchoolSystemUsingOOP {
                 if (student.get("Name").equals(studentName)) {
                     System.out.print("How many subjects do you want to add? ");
                     int numberOfSubjects = scanner.nextInt();
-                    scanner.nextLine(); // Consume newline
+                    scanner.nextLine();
 
                     for (int i = 0; i < numberOfSubjects; i++) {
                         System.out.print("Enter subject name: ");
                         String subjectName = scanner.nextLine();
                         System.out.print("Enter marks for " + subjectName + ": ");
                         int marks = scanner.nextInt();
-                        scanner.nextLine(); // Consume newline
+                        scanner.nextLine();
 
                         List<Map<String, Object>> subjects = (List<Map<String, Object>>) student.get("Subjects");
                         subjects.add(createSubject(subjectName, "Teacher Name", 3, marks, "A", "Good"));
