@@ -220,7 +220,6 @@ public class SchoolSystemUsingOOP {
         Map<String, Object> schoolInfo = schools.get(schoolName);
 
         if (schoolInfo != null) {
-
             System.out.print("Enter book ID: ");
             int bookID = scanner.nextInt();
             scanner.nextLine();
