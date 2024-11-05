@@ -250,13 +250,11 @@ public class SchoolSystemUsingOOP {
         Map<String, Object> schoolInfo = schools.get(schoolName);
 
         if (schoolInfo != null) {
-            System.out.println("Available Books in " + schoolName + " Library:");
-            List<Map<String, Object>> books = (List<Map<String, Object>>) schoolInfo.get("Library");
-
-            for (Map<String, Object> book : books) {
-                String availabilityStatus = (String) book.get("AvailabilityStatus");
-                if ("available".equalsIgnoreCase(availabilityStatus)) {
-                    System.out.printf("Book ID: %d, Title: %s, Author: %s, Year: %d%n", book.get("BookID"), book.get("Title"), book.get("Author"), book.get("PublicationYear"));
+            List<Map<String, Object>> library = (List<Map<String, Object>>) schoolInfo.get("Library");
+            System.out.println("Available Books:");
+            for (Map<String, Object> book : library) {
+                if ("available".equalsIgnoreCase((String) book.get("AvailabilityStatus"))) {
+                    System.out.printf("Book ID: %d, Title: %s, Author: %s, Published in: %d%n", book.get("BookID"), book.get("Title"), book.get("Author"), book.get("PublicationYear"));
                 }
             }
         } else {
