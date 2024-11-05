@@ -78,6 +78,7 @@ public class SchoolSystemUsingOOP {
     }
     // ask the user how many school he/ she want to add
     // ask the user to enter school name
+    // ask the user to enter school address
     private static void addSchools(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("How many schools do you want to add? ");
         int numberOfSchools = scanner.nextInt();
