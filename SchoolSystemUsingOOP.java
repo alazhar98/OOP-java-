@@ -185,7 +185,7 @@ public class SchoolSystemUsingOOP {
             ((List<Map<String, Object>>) schoolInfo.get("Teachers")).add(teacher);
             System.out.println("Teacher added successfully.");
 
-            // Step 2: Assign teacher to a subject
+
             System.out.print("Enter student name to assign teacher to subject: ");
             String studentName = scanner.nextLine();
             List<Map<String, Object>> students = (List<Map<String, Object>>) schoolInfo.get("Students");
@@ -219,7 +219,7 @@ public class SchoolSystemUsingOOP {
         Map<String, Object> schoolInfo = schools.get(schoolName);
 
         if (schoolInfo != null) {
-            // Collect book details
+
             System.out.print("Enter book ID: ");
             int bookID = scanner.nextInt();
             scanner.nextLine(); // Consume newline
