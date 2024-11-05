@@ -470,7 +470,7 @@ public class SchoolSystemUsingOOP {
         student.put("Subjects", new ArrayList<Map<String, Object>>());
         return student;
     }
-
+    // create teacher
     private static Map<String, Object> createTeacher(int id, String name, String subjectExpertise, int yearsOfExperience) {
         Map<String, Object> teacher = new HashMap<>();
         teacher.put("ID", id);
