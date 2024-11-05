@@ -102,7 +102,8 @@ public class SchoolSystemUsingOOP {
         }
     }
     // ask user to enter school name that student want to add and check if there is school in this name
-    
+    // ask user how many student want to add on that school
+    // 
     private static void addStudents(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name to add students: ");
         String schoolName = scanner.nextLine();
@@ -111,7 +112,7 @@ public class SchoolSystemUsingOOP {
         if (schoolInfo != null) {
             System.out.print("How many students do you want to add? ");
             int numberOfStudents = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             for (int i = 0; i < numberOfStudents; i++) {
                 System.out.print("Enter student name: ");
