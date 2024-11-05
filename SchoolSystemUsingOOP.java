@@ -315,7 +315,6 @@ public class SchoolSystemUsingOOP {
             System.out.println("School not found.");
         }
     }
-
     private static void deleteTeacherFromSubject(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name: ");
         String schoolName = scanner.nextLine();
