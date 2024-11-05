@@ -177,12 +177,11 @@ public class SchoolSystemUsingOOP {
             String subjectExpertise = scanner.nextLine();
             System.out.print("Enter years of experience: ");
             int yearsOfExperience = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
-            // Create teacher object
             Map<String, Object> teacher = createTeacher(teacherID, teacherName, subjectExpertise, yearsOfExperience);
 
-            // Add teacher to the school's list of teachers
+
             ((List<Map<String, Object>>) schoolInfo.get("Teachers")).add(teacher);
             System.out.println("Teacher added successfully.");
 
