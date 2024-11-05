@@ -277,7 +277,7 @@ public class SchoolSystemUsingOOP {
     }
     //  ask user to enter school name and check if there is school in this name
     // ask user to enter student id and check if there is student id
-    // ask user to enter book id and check if there is book id 
+    // ask user to enter book id and check if there is book id
     // assign that book to that student
     // put the status of the book unavailable after assign
     private static void assignBookToStudent(Map<String, Map<String, Object>> schools, Scanner scanner) {
@@ -331,7 +331,9 @@ public class SchoolSystemUsingOOP {
             System.out.println("School not found.");
         }
     }
-
+    // ask user to enter school name and check if there is school in this name
+    // ask user to enter student id and check if there is student id
+    // list  all the book assign to this student if no books return no books 
     private static void listAssignedBooksForStudent(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name to list assigned books for student: ");
         String schoolName = scanner.nextLine();
