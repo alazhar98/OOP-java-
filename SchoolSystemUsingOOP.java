@@ -103,6 +103,7 @@ public class SchoolSystemUsingOOP {
     }
     // ask user to enter school name that student want to add and check if there is school in this name
     // ask user how many student want to add on that school
+    // ask user to enter student name
     // 
     private static void addStudents(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name to add students: ");
