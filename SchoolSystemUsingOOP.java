@@ -91,11 +91,11 @@ public class SchoolSystemUsingOOP {
             schoolInfo.put("Students", new ArrayList<Map<String, Object>>());
             schoolInfo.put("Teachers", new ArrayList<Map<String, Object>>());
             schoolInfo.put("Library", new ArrayList<Map<String, Object>>());  // Initialize library
+            schoolInfo.put("BookAssignments", new HashMap<Integer, List<Map<String, Object>>>());  // Book assignments by student ID
             schools.put(schoolName, schoolInfo);
             System.out.println("School added successfully.");
         }
     }
-
     private static void addStudents(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name to add students: ");
         String schoolName = scanner.nextLine();
