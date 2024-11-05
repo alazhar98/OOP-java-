@@ -21,7 +21,9 @@ public class SchoolSystemUsingOOP {
             System.out.println("8. Delete Teacher from Subject");
             System.out.println("9. Add Book to Library");
             System.out.println("10. List Available Books");
-            System.out.println("11. Exit");
+            System.out.println("11. Assign Book to Student");
+            System.out.println("12. List Assigned Books for Student");
+            System.out.println("13. Exit");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
@@ -58,6 +60,12 @@ public class SchoolSystemUsingOOP {
                     listAvailableBooks(schools, scanner);
                     break;
                 case 11:
+                    assignBookToStudent(schools, scanner);
+                    break;
+                case 12:
+                    listAssignedBooksForStudent(schools, scanner);
+                    break;
+                case 13:
                     System.out.println("Exiting...");
                     scanner.close();
                     return;
