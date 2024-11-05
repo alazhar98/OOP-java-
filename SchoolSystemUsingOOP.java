@@ -258,6 +258,100 @@ public class SchoolSystemUsingOOP {
         }
     }
 
+    private static void retrieveMarks(Map<String, Map<String, Object>> schools, Scanner scanner) {
+        System.out.print("Enter school name: ");
+        String schoolName = scanner.nextLine();
+        Map<String, Object> schoolInfo = schools.get(schoolName);
+
+        if (schoolInfo != null) {
+            System.out.print("Enter student name: ");
+            String studentName = scanner.nextLine();
+            List<Map<String, Object>> students = (List<Map<String, Object>>) schoolInfo.get("Students");
+
+            for (Map<String, Object> student : students) {
+                if (student.get("Name").equals(studentName)) {
+                    System.out.print("Enter subject name: ");
+                    String subjectName = scanner.nextLine();
+                    List<Map<String, Object>> subjects = (List<Map<String, Object>>) student.get("Subjects");
+
+                    for (Map<String, Object> subject : subjects) {
+                        if (subject.get("SubjectName").equals(subjectName)) {
+                            System.out.printf("Marks for %s in %s: %d%n", studentName, subjectName, subject.get("Marks"));
+                            return;
+                        }
+                    }
+                    System.out.println("Subject not found.");
+                    return;
+                }
+            }
+            System.out.println("Student not found.");
+        } else {
+            System.out.println("School not found.");
+        }
+    }
+
+    private static void calculateAverageMarks(Map<String, Map<String, Object>> schools, Scanner scanner) {
+        System.out.print("Enter school name: ");
+        String schoolName = scanner.nextLine();
+        Map<String, Object> schoolInfo = schools.get(schoolName);
+
+        if (schoolInfo != null) {
+            System.out.print("Enter student name: ");
+            String studentName = scanner.nextLine();
+            List<Map<String, Object>> students = (List<Map<String, Object>>) schoolInfo.get("Students");
+
+            for (Map<String, Object> student : students) {
+                if (student.get("Name").equals(studentName)) {
+                    List<Map<String, Object>> subjects = (List<Map<String, Object>>) student.get("Subjects");
+                    int totalMarks = 0;
+                    int subjectCount = subjects.size();
+
+                    for (Map<String, Object> subject : subjects) {
+                        totalMarks += (int) subject.get("Marks");
+                        System.out.printf("Subject: %s, Marks: %d%n", subject.get("SubjectName"), subject.get("Marks"));
+                    }
+
+                    if (subjectCount > 0) {
+                        double average = (double) totalMarks / subjectCount;
+                        System.out.printf("Average Marks for %s: %.2f%n", studentName, average);
+                    } else {
+                        System.out.println("No subjects found for the student.");
+                    }
+                    return;
+                }
+            }
+            System.out.println("Student not found.");
+        } else {
+            System.out.println("School not found.");
+        }
+    }
+
+    private static void deleteTeacherFromSubject(Map<String, Map<String, Object>> schools, Scanner scanner) {
+        System.out.print("Enter school name to delete teacher from subject: ");
+        String schoolName = scanner.nextLine();
+        Map<String, Object> schoolInfo = schools.get(schoolName);
+
+        if (schoolInfo != null) {
+            System.out.print("Enter teacher name to delete from subject: ");
+            String teacherName = scanner.nextLine();
+            List<Map<String, Object>> students = (List<Map<String, Object>>) schoolInfo.get("Students");
+
+            for (Map<String, Object> student : students) {
+                List<Map<String, Object>> subjects = (List<Map<String, Object>>) student.get("Subjects");
+                for (Map<String, Object> subject : subjects) {
+                    if (subject.get("TeacherName").equals(teacherName)) {
+                        subject.put("TeacherName", "");  // Remove teacher from subject
+                        System.out.println("Teacher " + teacherName + " removed from subject.");
+                        return;
+                    }
+                }
+            }
+            System.out.println("Teacher not found in any subject.");
+        } else {
+            System.out.println("School not found.");
+        }
+    }
+
     private static Map<String, Object> createStudent(int id, String name, String grade, int age) {
         Map<String, Object> student = new HashMap<>();
         student.put("ID", id);
