@@ -434,6 +434,7 @@ public class SchoolSystemUsingOOP {
         }
     }
     //  ask user to enter school name and check if there is school in this name
+    //  ask user to enter teacher name and check if there is teacher in this name
     private static void deleteTeacherFromSubject(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name to delete teacher from subject: ");
         String schoolName = scanner.nextLine();
