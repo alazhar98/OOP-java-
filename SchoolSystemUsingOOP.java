@@ -173,6 +173,8 @@ public class SchoolSystemUsingOOP {
         }
     }
     //  ask user to enter school name and check if there is school in this name
+    // ask user to enter teacher ID , name , subject expertise, years of experience
+
     private static void addTeacherAndAssignToSubject(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name to add teacher: ");
         String schoolName = scanner.nextLine();
