@@ -361,7 +361,8 @@ public class SchoolSystemUsingOOP {
     }
     // ask user to enter school name and check if there is school in this name
     // ask user to enter student name  and check if there is student name
-    // 
+    // ask user to enter subject name  and check if there is subject name
+    // list all marks for that student in that subject
     private static void retrieveMarks(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name: ");
         String schoolName = scanner.nextLine();
