@@ -404,7 +404,6 @@ public class SchoolSystemUsingOOP {
                     System.out.printf("    Subject: %s, Marks: %d, Teacher: %s%n", subject.get("SubjectName"), subject.get("Marks"), subject.get("TeacherName"));
                 }
             }
-
             List<Map<String, Object>> teachers = (List<Map<String, Object>>) entry.getValue().get("Teachers");
             for (Map<String, Object> teacher : teachers) {
                 System.out.printf("  Teacher: %s (ID: %d, Expertise: %s, Experience: %d years)%n", teacher.get("Name"), teacher.get("ID"), teacher.get("SubjectExpertise"), teacher.get("YearsOfExperience"));
