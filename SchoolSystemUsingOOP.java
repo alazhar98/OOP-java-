@@ -29,7 +29,7 @@ public class SchoolSystemUsingOOP {
             int choice = scanner.nextInt();
             scanner.nextLine();
 
-            //switch cases from the menu  
+            //switch cases from the menu
             switch (choice) {
                 case 1:
                     addSchools(schools, scanner);
@@ -76,7 +76,8 @@ public class SchoolSystemUsingOOP {
             }
         }
     }
-
+    // ask the user how many school he/ she want to add
+    
     private static void addSchools(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("How many schools do you want to add? ");
         int numberOfSchools = scanner.nextInt();
