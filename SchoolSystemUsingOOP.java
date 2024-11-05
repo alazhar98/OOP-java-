@@ -460,7 +460,7 @@ public class SchoolSystemUsingOOP {
             System.out.println("School not found.");
         }
     }
-
+    // create students
     private static Map<String, Object> createStudent(int id, String name, String grade, int age) {
         Map<String, Object> student = new HashMap<>();
         student.put("ID", id);
