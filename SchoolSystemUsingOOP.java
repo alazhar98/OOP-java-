@@ -9,6 +9,7 @@ public class SchoolSystemUsingOOP {
         Scanner scanner = new Scanner(System.in);
         Map<String, Map<String, Object>> schools = new HashMap<>();
 
+        // the menu
         while (true) {
             System.out.println("\nMenu:");
             System.out.println("1. Add School");
