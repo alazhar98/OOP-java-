@@ -222,18 +222,18 @@ public class SchoolSystemUsingOOP {
 
             System.out.print("Enter book ID: ");
             int bookID = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
             System.out.print("Enter book title: ");
             String title = scanner.nextLine();
             System.out.print("Enter book author: ");
             String author = scanner.nextLine();
             System.out.print("Enter publication year: ");
             int publicationYear = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
             System.out.print("Enter availability status (available/unavailable): ");
             String availabilityStatus = scanner.nextLine();
 
-            // Create book object
+
             Map<String, Object> book = createBook(bookID, title, author, publicationYear, availabilityStatus);
 
             // Add book to the library
