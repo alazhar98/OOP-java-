@@ -152,7 +152,7 @@ public class SchoolSystemUsingOOP {
                         subjects.add(createSubject(subjectName, "Teacher Name", 3, marks, "A", "Good"));
                         System.out.println("Subject added successfully.");
                     }
-                    return; // Exit after adding subjects for the student
+                    return;
                 }
             }
             System.out.println("Student not found.");
@@ -167,7 +167,7 @@ public class SchoolSystemUsingOOP {
         Map<String, Object> schoolInfo = schools.get(schoolName);
 
         if (schoolInfo != null) {
-            // Step 1: Collect teacher details
+
             System.out.print("Enter teacher ID: ");
             int teacherID = scanner.nextInt();
             scanner.nextLine(); // Consume newline
