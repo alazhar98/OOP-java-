@@ -26,7 +26,7 @@ public class SchoolSystemUsingOOP {
             System.out.println("13. Exit");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -90,8 +90,8 @@ public class SchoolSystemUsingOOP {
             schoolInfo.put("Address", schoolAddress);
             schoolInfo.put("Students", new ArrayList<Map<String, Object>>());
             schoolInfo.put("Teachers", new ArrayList<Map<String, Object>>());
-            schoolInfo.put("Library", new ArrayList<Map<String, Object>>());  // Initialize library
-            schoolInfo.put("BookAssignments", new HashMap<Integer, List<Map<String, Object>>>());  // Book assignments by student ID
+            schoolInfo.put("Library", new ArrayList<Map<String, Object>>());
+            schoolInfo.put("BookAssignments", new HashMap<Integer, List<Map<String, Object>>>());
             schools.put(schoolName, schoolInfo);
             System.out.println("School added successfully.");
         }
@@ -200,7 +200,7 @@ public class SchoolSystemUsingOOP {
 
                     for (Map<String, Object> subject : subjects) {
                         if (subject.get("SubjectName").equals(subjectName)) {
-                            subject.put("TeacherName", teacherName); // Assign teacher to subject
+                            subject.put("TeacherName", teacherName);
                             System.out.println("Teacher " + teacherName + " assigned to subject " + subjectName);
                             return;
                         }
