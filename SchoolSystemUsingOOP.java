@@ -96,6 +96,7 @@ public class SchoolSystemUsingOOP {
             System.out.println("School added successfully.");
         }
     }
+
     private static void addStudents(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name to add students: ");
         String schoolName = scanner.nextLine();
@@ -125,6 +126,7 @@ public class SchoolSystemUsingOOP {
             System.out.println("School not found.");
         }
     }
+
     private static void addSubjects(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name: ");
         String schoolName = scanner.nextLine();
@@ -241,6 +243,7 @@ public class SchoolSystemUsingOOP {
             System.out.println("School not found.");
         }
     }
+
     private static void listAvailableBooks(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name to list available books: ");
         String schoolName = scanner.nextLine();
@@ -258,6 +261,7 @@ public class SchoolSystemUsingOOP {
             System.out.println("School not found.");
         }
     }
+
     private static void assignBookToStudent(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name to assign book to student: ");
         String schoolName = scanner.nextLine();
@@ -309,6 +313,7 @@ public class SchoolSystemUsingOOP {
             System.out.println("School not found.");
         }
     }
+
     private static void listAssignedBooksForStudent(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name to list assigned books for student: ");
         String schoolName = scanner.nextLine();
