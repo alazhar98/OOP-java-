@@ -227,6 +227,8 @@ public class SchoolSystemUsingOOP {
             System.out.println("School not found.");
         }
     }
+    // ask user to enter school name and check if there is school in this name
+    // ask user 
     private static void addBookToLibrary(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name to add book to library: ");
         String schoolName = scanner.nextLine();
