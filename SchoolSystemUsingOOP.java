@@ -479,7 +479,7 @@ public class SchoolSystemUsingOOP {
         teacher.put("YearsOfExperience", yearsOfExperience);
         return teacher;
     }
-
+    // create subject 
     private static Map<String, Object> createSubject(String subjectName, String teacherName, int creditHours, int marks, String grade, String comments) {
         Map<String, Object> subject = new HashMap<>();
         subject.put("SubjectName", subjectName);
