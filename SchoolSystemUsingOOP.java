@@ -244,7 +244,6 @@ public class SchoolSystemUsingOOP {
             System.out.println("School not found.");
         }
     }
-
     private static void listAvailableBooks(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name to list available books: ");
         String schoolName = scanner.nextLine();
