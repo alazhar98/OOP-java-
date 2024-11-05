@@ -317,7 +317,7 @@ public class SchoolSystemUsingOOP {
         if (schoolInfo != null) {
             System.out.print("Enter student ID: ");
             int studentID = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             Map<Integer, List<Map<String, Object>>> bookAssignments = (Map<Integer, List<Map<String, Object>>>) schoolInfo.get("BookAssignments");
             List<Map<String, Object>> assignedBooks = bookAssignments.get(studentID);
@@ -417,7 +417,7 @@ public class SchoolSystemUsingOOP {
                 List<Map<String, Object>> subjects = (List<Map<String, Object>>) student.get("Subjects");
                 for (Map<String, Object> subject : subjects) {
                     if (subject.get("TeacherName").equals(teacherName)) {
-                        subject.put("TeacherName", "");  // Remove teacher from subject
+                        subject.put("TeacherName", "");
                         System.out.println("Teacher " + teacherName + " removed from subject.");
                         return;
                     }
