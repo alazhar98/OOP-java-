@@ -500,7 +500,7 @@ public class SchoolSystemUsingOOP {
         book.put("AvailabilityStatus", availabilityStatus);
         return book;
     }
-
+    // display all schools
     private static void displaySchools(Map<String, Map<String, Object>> schools) {
         for (Map.Entry<String, Map<String, Object>> entry : schools.entrySet()) {
             String schoolName = entry.getKey();
