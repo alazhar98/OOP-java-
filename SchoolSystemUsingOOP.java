@@ -333,7 +333,7 @@ public class SchoolSystemUsingOOP {
     }
     // ask user to enter school name and check if there is school in this name
     // ask user to enter student id and check if there is student id
-    // list  all the book assign to this student if no books return no books 
+    // list  all the book assign to this student if no books return no books
     private static void listAssignedBooksForStudent(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name to list assigned books for student: ");
         String schoolName = scanner.nextLine();
@@ -359,7 +359,7 @@ public class SchoolSystemUsingOOP {
             System.out.println("School not found.");
         }
     }
-
+    //
     private static void retrieveMarks(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name: ");
         String schoolName = scanner.nextLine();
