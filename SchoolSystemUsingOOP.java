@@ -261,6 +261,61 @@ public class SchoolSystemUsingOOP {
             System.out.println("School not found.");
         }
     }
+    private static void assignBookToStudent(Map<String, Map<String, Object>> schools, Scanner scanner) {
+        System.out.print("Enter school name to assign book to student: ");
+        String schoolName = scanner.nextLine();
+        Map<String, Object> schoolInfo = schools.get(schoolName);
+
+        if (schoolInfo != null) {
+            System.out.print("Enter student ID: ");
+            int studentID = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+
+            // Find the student
+            List<Map<String, Object>> students = (List<Map<String, Object>>) schoolInfo.get("Students");
+            Map<String, Object> student = null;
+            for (Map<String, Object> s : students) {
+                if ((int) s.get("ID") == studentID) {
+                    student = s;
+                    break;
+                }
+            }
+
+            if (student != null) {
+                // Find the book in the library
+                System.out.print("Enter book ID to assign to student: ");
+                int bookID = scanner.nextInt();
+                scanner.nextLine(); // Consume newline
+                List<Map<String, Object>> library = (List<Map<String, Object>>) schoolInfo.get("Library");
+
+                Map<String, Object> bookToAssign = null;
+                for (Map<String, Object> book : library) {
+                    if ((int) book.get("BookID") == bookID && "available".equalsIgnoreCase((String) book.get("AvailabilityStatus"))) {
+                        bookToAssign = book;
+                        break;
+                    }
+                }
+
+                if (bookToAssign != null) {
+                    // Assign the book to the student
+                    Map<Integer, List<Map<String, Object>>> bookAssignments = (Map<Integer, List<Map<String, Object>>>) schoolInfo.get("BookAssignments");
+                    bookAssignments.putIfAbsent(studentID, new ArrayList<>());
+                    bookAssignments.get(studentID).add(bookToAssign);
+
+                    // Mark the book as unavailable
+                    bookToAssign.put("AvailabilityStatus", "unavailable");
+
+                    System.out.println("Book assigned to student successfully.");
+                } else {
+                    System.out.println("Book is not available.");
+                }
+            } else {
+                System.out.println("Student not found.");
+            }
+        } else {
+            System.out.println("School not found.");
+        }
+    }
 
     private static void retrieveMarks(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name: ");
