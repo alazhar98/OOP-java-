@@ -123,7 +123,7 @@ public class SchoolSystemUsingOOP {
                 String studentGrade = scanner.next();
                 System.out.print("Enter student age: ");
                 int studentAge = scanner.nextInt();
-                scanner.nextLine(); // Consume newline
+                scanner.nextLine();
 
                 Map<String, Object> student = createStudent(studentID, studentName, studentGrade, studentAge);
                 ((List<Map<String, Object>>) schoolInfo.get("Students")).add(student);
@@ -133,7 +133,9 @@ public class SchoolSystemUsingOOP {
             System.out.println("School not found.");
         }
     }
-
+    // ask user to enter school name that student want to add and check if there is school in this name
+    // ask user to enter student name that subject want take and check if there is student in this name
+    // 
     private static void addSubjects(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name: ");
         String schoolName = scanner.nextLine();
