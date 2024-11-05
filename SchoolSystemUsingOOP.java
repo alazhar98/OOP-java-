@@ -316,6 +316,31 @@ public class SchoolSystemUsingOOP {
             System.out.println("School not found.");
         }
     }
+    private static void listAssignedBooksForStudent(Map<String, Map<String, Object>> schools, Scanner scanner) {
+        System.out.print("Enter school name to list assigned books for student: ");
+        String schoolName = scanner.nextLine();
+        Map<String, Object> schoolInfo = schools.get(schoolName);
+
+        if (schoolInfo != null) {
+            System.out.print("Enter student ID: ");
+            int studentID = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+
+            Map<Integer, List<Map<String, Object>>> bookAssignments = (Map<Integer, List<Map<String, Object>>>) schoolInfo.get("BookAssignments");
+            List<Map<String, Object>> assignedBooks = bookAssignments.get(studentID);
+
+            if (assignedBooks != null && !assignedBooks.isEmpty()) {
+                System.out.println("Assigned Books for Student:");
+                for (Map<String, Object> book : assignedBooks) {
+                    System.out.printf("Book ID: %d, Title: %s%n", book.get("BookID"), book.get("Title"));
+                }
+            } else {
+                System.out.println("No books assigned to this student.");
+            }
+        } else {
+            System.out.println("School not found.");
+        }
+    }
 
     private static void retrieveMarks(Map<String, Map<String, Object>> schools, Scanner scanner) {
         System.out.print("Enter school name: ");
