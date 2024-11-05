@@ -292,12 +292,10 @@ public class SchoolSystemUsingOOP {
                 }
 
                 if (bookToAssign != null) {
-                    // Assign the book to the student
                     Map<Integer, List<Map<String, Object>>> bookAssignments = (Map<Integer, List<Map<String, Object>>>) schoolInfo.get("BookAssignments");
                     bookAssignments.putIfAbsent(studentID, new ArrayList<>());
                     bookAssignments.get(studentID).add(bookToAssign);
 
-                    // Mark the book as unavailable
                     bookToAssign.put("AvailabilityStatus", "unavailable");
 
                     System.out.println("Book assigned to student successfully.");
