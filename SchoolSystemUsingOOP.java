@@ -19,12 +19,11 @@ public class SchoolSystemUsingOOP {
             System.out.println("5. Display Schools, Students, Teachers, and Libraries");
             System.out.println("6. Retrieve Marks for a Student in a Subject");
             System.out.println("7. Calculate Average Marks for a Student");
-            System.out.println("8. Delete Teacher from Subject");
-            System.out.println("9. Add Book to Library");
-            System.out.println("10. List Available Books");
-            System.out.println("11. Assign Book to Student");
-            System.out.println("12. List Assigned Books for Student");
-            System.out.println("13. Exit");
+            System.out.println("8. Add Book to Library");
+            System.out.println("9. List Available Books");
+            System.out.println("10. Assign Book to Student");
+            System.out.println("11. List Assigned Books for Student");
+            System.out.println("12. Exit");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -52,22 +51,20 @@ public class SchoolSystemUsingOOP {
                 case 7:
                     calculateAverageMarks(schools, scanner);
                     break;
+
                 case 8:
-                    deleteTeacherFromSubject(schools, scanner);
-                    break;
-                case 9:
                     addBookToLibrary(schools, scanner);
                     break;
-                case 10:
+                case 9:
                     listAvailableBooks(schools, scanner);
                     break;
-                case 11:
+                case 10:
                     assignBookToStudent(schools, scanner);
                     break;
-                case 12:
+                case 11:
                     listAssignedBooksForStudent(schools, scanner);
                     break;
-                case 13:
+                case 12:
                     System.out.println("Exiting...");
                     scanner.close();
                     return;
@@ -429,33 +426,6 @@ public class SchoolSystemUsingOOP {
                 }
             }
             System.out.println("Student not found.");
-        } else {
-            System.out.println("School not found.");
-        }
-    }
-    //  ask user to enter school name and check if there is school in this name
-    //  ask user to enter teacher name and check if there is teacher in this name
-    private static void deleteTeacherFromSubject(Map<String, Map<String, Object>> schools, Scanner scanner) {
-        System.out.print("Enter school name to delete teacher from subject: ");
-        String schoolName = scanner.nextLine();
-        Map<String, Object> schoolInfo = schools.get(schoolName);
-
-        if (schoolInfo != null) {
-            System.out.print("Enter teacher name to delete from subject: ");
-            String teacherName = scanner.nextLine();
-            List<Map<String, Object>> students = (List<Map<String, Object>>) schoolInfo.get("Students");
-
-            for (Map<String, Object> student : students) {
-                List<Map<String, Object>> subjects = (List<Map<String, Object>>) student.get("Subjects");
-                for (Map<String, Object> subject : subjects) {
-                    if (subject.get("TeacherName").equals(teacherName)) {
-                        subject.put("TeacherName", "");
-                        System.out.println("Teacher " + teacherName + " removed from subject.");
-                        return;
-                    }
-                }
-            }
-            System.out.println("Teacher not found in any subject.");
         } else {
             System.out.println("School not found.");
         }
