@@ -3,7 +3,7 @@ package SchoolSystem.Entities;
 import java.util.List;
 
 public class Library {
-    List<Book> books;
-    String name;
+    public List<Book> books;
+    public String name;
 
 }

@@ -2,7 +2,6 @@ package SchoolSystem.Services;
 
 
 import SchoolSystem.Entities.Subject;
-import SchoolSystem.Entities.Teacher;
 
 import java.util.ArrayList;
 import java.util.List;
