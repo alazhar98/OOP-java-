@@ -3,9 +3,10 @@ package SchoolSystem.Entities;
 import java.util.List;
 
 public class Teacher {
-    String name;
-    String id;
-    Short yearsOfExperience;
-    List<Subject> subjectsExpertiseList;
+    public String name;
+    public String id;
+    public Short yearsOfExperience;
+    public List<Subject> subjectsExpertiseList;
+
 
 }

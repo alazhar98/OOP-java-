@@ -1,5 +1,7 @@
 package SchoolSystem.Entities;
 
+import java.util.List;
+
 public class School {
     public String name;
     public String address;
