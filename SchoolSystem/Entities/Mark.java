@@ -1,8 +1,8 @@
 package SchoolSystem.Entities;
 
 public class Mark {
-    Float marks;
-    String comments;
-    String grade;
-    String description;
+    public Float marks;
+    public String comments;
+    public String grade;
+    public String description;
 }
