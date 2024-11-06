@@ -7,4 +7,5 @@ public class Teacher {
     String id;
     Short yearsOfExperience;
     List<Subject> subjectsExpertiseList;
+
 }
