@@ -494,5 +494,6 @@ public class SchoolSystemUsingOOP {
                 System.out.printf("  Book: %s by %s, Published in: %d, Status: %s%n", book.get("Title"), book.get("Author"), book.get("PublicationYear"), book.get("AvailabilityStatus"));
             }
         }
+
     }
 }
