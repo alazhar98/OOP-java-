@@ -24,7 +24,7 @@ public class BookService {
         book.id = scanner.nextInt();
 
         System.out.println("the book its Available");
-        book.isAvailable = scanner.hasNext();
+        book.isAvailable = scanner.nextBoolean();
 
         System.out.println("what is year Of Publishing");
         book.yearOfPublishing = scanner.nextLine();
