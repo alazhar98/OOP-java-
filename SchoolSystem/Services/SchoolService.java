@@ -19,7 +19,7 @@ public class SchoolService {
         System.out.println("Enter School Address");
         school.address = scanner.nextLine();
 
-        school.students=StudentService.addStudents();
+        school.students = StudentService.addStudents();
         return school;
     }
 
