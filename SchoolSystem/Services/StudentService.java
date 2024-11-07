@@ -24,6 +24,9 @@ public class StudentService {
 
         System.out.println("Enter student grade ");
         student.grade = scanner.nextLine();
+
+        student.courses=SubjectService.addSubjects();
+
         return student;
     }
     public static List<Student> addStudents() {
