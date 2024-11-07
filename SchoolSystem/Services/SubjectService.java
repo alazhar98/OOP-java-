@@ -19,6 +19,8 @@ public class SubjectService {
         System.out.println("Enter credit Hours of the Subject");
         subject.creditHours = scanner.nextShort();
 
+        subject.marks=MarkService.addMarks();
+
         return subject;
     }
     public static List<Subject> addSubjects() {
