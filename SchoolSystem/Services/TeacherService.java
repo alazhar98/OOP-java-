@@ -1,6 +1,6 @@
 package SchoolSystem.Services;
 
-import SchoolSystem.Entities.Student;
+
 import SchoolSystem.Entities.Teacher;
 
 import java.util.ArrayList;
