@@ -1,7 +1,6 @@
 package SchoolSystem.Services;
 
 import SchoolSystem.Entities.Mark;
-import SchoolSystem.Entities.Student;
 
 
 import java.util.ArrayList;
