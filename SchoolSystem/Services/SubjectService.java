@@ -19,7 +19,11 @@ public class SubjectService {
         System.out.println("Enter credit Hours of the Subject");
         subject.creditHours = scanner.nextShort();
 
+
         if (!isTeacher) {
+
+            System.out.println("Enter marks for subject: " );
+
             subject.marks = MarkService.addMarks();
         }
 
@@ -29,9 +33,13 @@ public class SubjectService {
     public static List<Subject> addSubjects(Boolean isTeacher) {
         Boolean flag = true;
         List<Subject> subjects = new ArrayList<>();
-        while (flag) {
+        do {
             subjects.add(SubjectService.addSubject(isTeacher));
+            System.out.println("Enter N to exit, Enter Any Key to continue");
+            flag = scanner.nextLine().equals("N") ? false : true;
+
         }
+        while (flag);
         return subjects;
     }
 }

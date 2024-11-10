@@ -36,11 +36,13 @@ public class MarkService {
     public static List<Mark> addMarks() {
         Boolean flag = true;
         List<Mark> marks = new ArrayList<>();
-        while (flag) {
+        do {
             marks.add(MarkService.addMark());
             System.out.println("Enter N to exit, Enter Any Key to continue");
-            flag = scanner.nextLine() == "N" ? false : true;
+            flag = scanner.nextLine().equals("N") ? false : true;
+
         }
+        while (flag);
         return marks;
     }
 }

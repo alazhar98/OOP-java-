@@ -29,6 +29,7 @@ public class TeacherService {
         List<Teacher> teachers = new ArrayList<>();
         while (flag) {
             teachers.add(TeacherService.addTeacher());
+            flag = scanner.nextLine().equals("N") ? false : true;
         }
         return teachers;
     }

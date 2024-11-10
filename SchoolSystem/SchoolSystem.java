@@ -9,5 +9,9 @@ public class SchoolSystem {
 
         System.out.println("***School details***");
         SchoolService.addSchool();
+
+        TeacherService.addTeachers();
+        System.out.println("Book Details ");
+        LibraryService.addLibrary();
     }
 }

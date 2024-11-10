@@ -38,6 +38,7 @@ public class StudentService {
         List<Student> students = new ArrayList<>();
         while (flag) {
             students.add(StudentService.addStudent());
+            flag = scanner.nextLine().equals("N") ? false : true;
         }
         return students;
     }
