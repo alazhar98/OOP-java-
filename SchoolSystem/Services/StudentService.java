@@ -22,6 +22,8 @@ public class StudentService {
         System.out.println("Enter student age ");
         student.age = scanner.nextShort();
 
+        scanner.nextLine();
+
         System.out.println("Enter student grade ");
         student.grade = scanner.nextLine();
 
