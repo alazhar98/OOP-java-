@@ -18,6 +18,8 @@ public class MarkService {
         System.out.println("Enter Student marks");
         mark.marks = scanner.nextFloat();
 
+        scanner.nextLine();
+
         System.out.println("Enter comments");
         mark.comments = scanner.nextLine();
 
@@ -30,14 +32,6 @@ public class MarkService {
         return mark;
     }
 
-    public static List<Mark> addMarks() {
-        Boolean flag = true;
-        List<Mark> marks = new ArrayList<>();
-        while (flag) {
-            marks.add(MarkService.addMark());
-        }
-        return marks;
-    }
 }
 
 
