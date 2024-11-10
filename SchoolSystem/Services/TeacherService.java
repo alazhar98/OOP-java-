@@ -21,7 +21,7 @@ public class TeacherService {
         System.out.println("Enter years Of Experience of the teacher  ");
         teacher.yearsOfExperience=scanner.nextShort();
 
-        teacher.subjectsExpertiseList=SubjectService.addSubjects();
+        teacher.subjectsExpertiseList=SubjectService.addSubjects(true);
         return teacher;
     }
     public static List<Teacher> addTeachers() {

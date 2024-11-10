@@ -29,9 +29,20 @@ public class MarkService {
         System.out.println("Enter the grade");
         mark.grade = scanner.nextLine();
 
+
         return mark;
     }
 
+    public static List<Mark> addMarks() {
+        Boolean flag = true;
+        List<Mark> marks = new ArrayList<>();
+        while (flag) {
+            marks.add(MarkService.addMark());
+            System.out.println("Enter N to exit, Enter Any Key to continue");
+            flag = scanner.nextLine() == "N" ? false : true;
+        }
+        return marks;
+    }
 }
 
 

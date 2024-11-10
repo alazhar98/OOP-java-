@@ -28,7 +28,7 @@ public class StudentService {
         student.grade = scanner.nextLine();
 
 
-        student.courses = SubjectService.addSubjects();
+        student.courses = SubjectService.addSubjects(false);
 
         return student;
     }

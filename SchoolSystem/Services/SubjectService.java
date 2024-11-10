@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class SubjectService {
     static Scanner scanner = new Scanner(System.in);
 
-    public static Subject addSubject() {
+    public static Subject addSubject(Boolean isTeacher) {
 
         Subject subject = new Subject();
         System.out.println("Enter Subject Name");
@@ -19,15 +19,18 @@ public class SubjectService {
         System.out.println("Enter credit Hours of the Subject");
         subject.creditHours = scanner.nextShort();
 
-        subject.marks=MarkService.addMarks();
+        if (!isTeacher) {
+            subject.marks = MarkService.addMarks();
+        }
 
         return subject;
     }
-    public static List<Subject> addSubjects() {
+
+    public static List<Subject> addSubjects(Boolean isTeacher) {
         Boolean flag = true;
         List<Subject> subjects = new ArrayList<>();
         while (flag) {
-            subjects.add(SubjectService.addSubject());
+            subjects.add(SubjectService.addSubject(isTeacher));
         }
         return subjects;
     }
