@@ -40,6 +40,7 @@ public class StudentService {
             students.add(StudentService.addStudent());
             flag = scanner.nextLine().equals("N") ? false : true;
         }
+
         return students;
     }
 }
