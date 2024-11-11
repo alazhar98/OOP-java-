@@ -27,17 +27,23 @@ public class BookService {
         System.out.println("the book its Available");
         book.isAvailable = scanner.nextBoolean();
 
+        scanner.nextLine();
         System.out.println("what is year Of Publishing");
         book.yearOfPublishing = scanner.nextLine();
 
 
         return book;
     }
+
     public static List<Book> addBooks() {
         Boolean flag = true;
         List<Book> books = new ArrayList<>();
         while (flag) {
             books.add(BookService.addBook());
+            System.out.println("Enter N to exit, Enter Any Key to continue");
+            if (scanner.nextLine().equalsIgnoreCase("N")) {
+                flag = false;
+            }
         }
         return books;
     }
