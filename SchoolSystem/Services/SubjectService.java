@@ -22,7 +22,7 @@ public class SubjectService {
 
         if (!isTeacher) {
 
-            System.out.println("Enter marks for subject: " );
+            System.out.println("Enter marks for subject: ");
 
             subject.marks = MarkService.addMarks();
         }
@@ -33,13 +33,13 @@ public class SubjectService {
     public static List<Subject> addSubjects(Boolean isTeacher) {
         Boolean flag = true;
         List<Subject> subjects = new ArrayList<>();
-        do {
+        while (flag) {
             subjects.add(SubjectService.addSubject(isTeacher));
             System.out.println("Enter N to exit, Enter Any Key to continue");
-            flag = scanner.nextLine().equals("N") ? false : true;
-
+            if (scanner.nextLine().equalsIgnoreCase("N")) {
+                flag = false;
+            }
         }
-        while (flag);
         return subjects;
 
 
