@@ -4,10 +4,10 @@ import java.util.List;
 
 public class School {
     private String name;
-    public String address;
-    public List<Student> students;
-    public List<Teacher> teachers;
-    public Library library;
+    private String address;
+    private List<Student> students;
+    private List<Teacher> teachers;
+    private Library library;
 
     public String getName() {
         return name;
