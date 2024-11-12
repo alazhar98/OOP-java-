@@ -1,6 +1,7 @@
 package SchoolSystem.Services;
 
 
+import SchoolSystem.Entities.Mark;
 import SchoolSystem.Entities.Subject;
 
 import java.util.ArrayList;
@@ -14,17 +15,23 @@ public class SubjectService {
 
         Subject subject = new Subject();
         System.out.println("Enter Subject Name");
-        subject.name = scanner.nextLine();
+        String subjectName = scanner.nextLine();
+        subject.setName(subjectName);
+        subject.getName();
 
         System.out.println("Enter credit Hours of the Subject");
-        subject.creditHours = scanner.nextShort();
-
+        Integer subjectCreditHours = scanner.nextInt();
+        subject.setCreditHours(subjectCreditHours);
         scanner.nextLine();
+        subject.getCreditHours();
+
         if (!isTeacher) {
 
             System.out.println("Enter marks for subject: ");
 
-            subject.marks = MarkService.addMarks();
+            List<Mark> subjectMarks = MarkService.addMarks();
+            subject.setMarks(subjectMarks);
+            subject.getMarks();
         }
 
         return subject;
