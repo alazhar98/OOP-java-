@@ -14,7 +14,9 @@ public class SchoolService {
 
         School school = new School();
         System.out.println("Enter School Name");
-        school.name = scanner.nextLine();
+        String schoolName = scanner.nextLine();
+        school.setName(schoolName);
+        school.getName();
 
         System.out.println("Enter School Address");
         school.address = scanner.nextLine();
