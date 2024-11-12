@@ -10,7 +10,12 @@ public class SchoolSystem {
         System.out.println("***School details***");
         SchoolService.addSchool();
 
+        System.out.println("***teacher details***");
+        TeacherService.addTeacher();
+
         System.out.println("Book Details ");
         LibraryService.addLibrary();
+
+
     }
 }
