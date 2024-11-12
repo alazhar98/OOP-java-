@@ -17,8 +17,7 @@ public class LibraryService {
         library.setName(libraryName);
         List<Book>libraryBooks=BookService.addBooks();
         library.setBooks(libraryBooks);
-        library.getName();
-        library.getBooks();
+
         return library;
 
     }
