@@ -27,7 +27,7 @@ public class TeacherService {
 
         List<Subject> getSubjectsExpertiseList=SubjectService.addSubjects(true);
         teacher.setSubjectsExpertiseList(getSubjectsExpertiseList);
-        teacher.getSubjectsExpertiseList();
+
 
         return teacher;
     }
