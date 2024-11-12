@@ -18,17 +18,17 @@ public class MarkService {
         System.out.println("Enter Student marks");
         Float marks = scanner.nextFloat();
         mark.setMarks(marks);
-        mark.getMarks();
+
         scanner.nextLine();
 
         System.out.println("Enter comments");
-        mark.comments = scanner.nextLine();
+        String markComment = scanner.nextLine();
 
         System.out.println("Enter description");
-        mark.description = scanner.nextLine();
+        String markDescription = scanner.nextLine();
 
         System.out.println("Enter the grade");
-        mark.grade = scanner.nextLine();
+        String markGrade = scanner.nextLine();
 
 
         return mark;
