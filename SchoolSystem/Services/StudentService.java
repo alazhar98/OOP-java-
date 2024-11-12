@@ -14,19 +14,21 @@ public class StudentService {
 
         Student student = new Student();
         System.out.println("Enter Student Name");
-        student.name = scanner.nextLine();
+        String studentName = scanner.nextLine();
+        student.setName(studentName);
 
         System.out.println("Enter Student id ");
-        student.id = scanner.nextLine();
+        String studentId = scanner.nextLine();
+        student.setId(studentId);
 
         System.out.println("Enter student age ");
-        student.age = scanner.nextShort();
-
+        Short studentAge = scanner.nextShort();
+        student.setAge(studentAge);
         scanner.nextLine();
 
         System.out.println("Enter student grade ");
-        student.grade = scanner.nextLine();
-
+        String studentGrade = scanner.nextLine();
+        student.setGrade(studentGrade);
 
         student.courses = SubjectService.addSubjects(false);
 
@@ -45,5 +47,4 @@ public class StudentService {
         }
         return students;
     }
-
 }
