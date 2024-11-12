@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Subject {
     private String name;
-    private Short creditHours;
+    private Integer creditHours;
     private List<Mark> marks;
 
     public String getName() {
@@ -15,12 +15,12 @@ public class Subject {
         this.name = name;
     }
 
-    public Short getCreditHours() {
+    public Integer getCreditHours() {
         return creditHours;
     }
 
-    public void setCreditHours(Short creditHours) {
-        this.creditHours = creditHours;
+    public Integer setCreditHours(Integer creditHours) {
+        return creditHours;
     }
 
     public List<Mark> getMarks() {
