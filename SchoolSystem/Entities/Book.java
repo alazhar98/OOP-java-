@@ -1,12 +1,13 @@
 package SchoolSystem.Entities;
 
 import java.util.Date;
+
 public class Book {
-    public String name;
-    public String author;
-    public Integer id;
-    public String yearOfPublishing;
-    public Boolean isAvailable;
+    private String name;
+    private String author;
+    private Integer id;
+    private String yearOfPublishing;
+    private Boolean isAvailable;
 
     public String getName() {
         return name;
