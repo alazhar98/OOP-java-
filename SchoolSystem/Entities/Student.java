@@ -7,7 +7,7 @@ public class Student {
     private String name;
     private String grade;
     private Short age;
-    public List<Subject> courses;
+    private List<Subject> courses;
 
     public String getId() {
         return id;
