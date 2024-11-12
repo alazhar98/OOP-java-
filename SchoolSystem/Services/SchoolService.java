@@ -1,6 +1,7 @@
 package SchoolSystem.Services;
 
 import SchoolSystem.Entities.School;
+import SchoolSystem.Entities.Student;
 
 
 import java.util.ArrayList;
@@ -16,12 +17,12 @@ public class SchoolService {
         System.out.println("Enter School Name");
         String schoolName = scanner.nextLine();
         school.setName(schoolName);
-        school.getName();
+
 
         System.out.println("Enter School Address");
-        school.address = scanner.nextLine();
+        String address = scanner.nextLine();
 
-        school.students = StudentService.addStudents();
+        List<Student>schoolStudents = StudentService.addStudents();
         return school;
     }
 
