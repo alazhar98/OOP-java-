@@ -17,13 +17,13 @@ public class SubjectService {
         System.out.println("Enter Subject Name");
         String subjectName = scanner.nextLine();
         subject.setName(subjectName);
-        subject.getName();
+
 
         System.out.println("Enter credit Hours of the Subject");
         Integer subjectCreditHours = scanner.nextInt();
         subject.setCreditHours(subjectCreditHours);
         scanner.nextLine();
-        subject.getCreditHours();
+
 
         if (!isTeacher) {
 
@@ -31,7 +31,7 @@ public class SubjectService {
 
             List<Mark> subjectMarks = MarkService.addMarks();
             subject.setMarks(subjectMarks);
-            subject.getMarks();
+        ;
         }
 
         return subject;
