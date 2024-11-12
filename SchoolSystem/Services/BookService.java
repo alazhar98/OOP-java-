@@ -1,10 +1,6 @@
 package SchoolSystem.Services;
 
 import SchoolSystem.Entities.Book;
-import SchoolSystem.Entities.Library;
-import SchoolSystem.Entities.School;
-
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
