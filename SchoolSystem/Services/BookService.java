@@ -12,20 +12,21 @@ public class BookService {
 
         Book book = new Book();
         System.out.println("Enter Book Name");
-        book.name = scanner.nextLine();
-
+        String bookName = scanner.nextLine();
+        book.setName(bookName);
         System.out.println("Enter Book Author ");
-        book.author = scanner.nextLine();
+        String bookAuthor = scanner.nextLine();
+
 
         System.out.println("Enter Book Id");
-        book.id = scanner.nextInt();
+        Integer bookId = scanner.nextInt();
 
         System.out.println("the book its Available");
-        book.isAvailable = scanner.nextBoolean();
+        Boolean isAvailable = scanner.nextBoolean();
 
         scanner.nextLine();
         System.out.println("what is year Of Publishing");
-        book.yearOfPublishing = scanner.nextLine();
+        String yearOfPublishing = scanner.nextLine();
 
 
         return book;
