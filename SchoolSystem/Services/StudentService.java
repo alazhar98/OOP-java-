@@ -2,6 +2,7 @@ package SchoolSystem.Services;
 
 
 import SchoolSystem.Entities.Student;
+import SchoolSystem.Entities.Subject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,9 +33,8 @@ public class StudentService {
         System.out.println("Enter student grade ");
         String studentGrade = scanner.nextLine();
         student.setGrade(studentGrade);
-        student.getGrade();
 
-        student.courses = SubjectService.addSubjects(false);
+        List<Subject>studentCourses = SubjectService.addSubjects(false);
 
         return student;
     }
