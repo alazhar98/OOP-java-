@@ -16,19 +16,23 @@ public class StudentService {
         System.out.println("Enter Student Name");
         String studentName = scanner.nextLine();
         student.setName(studentName);
+        student.getName();
 
         System.out.println("Enter Student id ");
         String studentId = scanner.nextLine();
         student.setId(studentId);
+        student.getId();
 
         System.out.println("Enter student age ");
         Short studentAge = scanner.nextShort();
         student.setAge(studentAge);
         scanner.nextLine();
+        student.getAge();
 
         System.out.println("Enter student grade ");
         String studentGrade = scanner.nextLine();
         student.setGrade(studentGrade);
+        student.getGrade();
 
         student.courses = SubjectService.addSubjects(false);
 
