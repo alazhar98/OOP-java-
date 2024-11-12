@@ -35,7 +35,7 @@ public class SubjectService {
         List<Subject> subjects = new ArrayList<>();
         while (flag) {
             subjects.add(SubjectService.addSubject(isTeacher));
-            System.out.println("Enter N to exit, Enter Any Key to continue");
+            System.out.println("Enter N to exit from subject, Enter Any Key to continue");
             if (scanner.nextLine().equalsIgnoreCase("N")) {
                 flag = false;
             }

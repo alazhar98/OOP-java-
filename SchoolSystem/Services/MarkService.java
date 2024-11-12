@@ -38,7 +38,7 @@ public class MarkService {
         List<Mark> marks = new ArrayList<>();
         do {
             marks.add(MarkService.addMark());
-            System.out.println("Enter N to exit, Enter Any Key to continue");
+            System.out.println("Enter N to exit from marks, Enter Any Key to continue");
             flag = scanner.nextLine().equals("N") ? false : true;
 
         }

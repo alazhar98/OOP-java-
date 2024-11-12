@@ -29,6 +29,7 @@ public class TeacherService {
         List<Teacher> teachers = new ArrayList<>();
         while (flag) {
             teachers.add(TeacherService.addTeacher());
+            System.out.println("Enter N to exit from Teacher, Enter Any Key to continue");
             flag = scanner.nextLine().equals("N") ? false : true;
         }
         return teachers;

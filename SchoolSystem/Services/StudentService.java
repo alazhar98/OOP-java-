@@ -38,7 +38,7 @@ public class StudentService {
         List<Student> students = new ArrayList<>();
         while (flag) {
             students.add(StudentService.addStudent());
-            System.out.println("Enter N to exit, Enter Any Key to continue");
+            System.out.println("Enter N to exit from student, Enter Any Key to continue");
             if (scanner.nextLine().equalsIgnoreCase("N")) {
                 flag = false;
             }
