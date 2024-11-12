@@ -16,8 +16,9 @@ public class MarkService {
         Mark mark = new Mark();
 
         System.out.println("Enter Student marks");
-        mark.marks = scanner.nextFloat();
-
+        Float marks = scanner.nextFloat();
+        mark.setMarks(marks);
+        mark.getMarks();
         scanner.nextLine();
 
         System.out.println("Enter comments");
