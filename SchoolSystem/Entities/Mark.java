@@ -2,9 +2,9 @@ package SchoolSystem.Entities;
 
 public class Mark {
     private Float marks;
-    public String comments;
-    public String grade;
-    public String description;
+    private String comments;
+    private String grade;
+    private String description;
 
     public Float getMarks() {
         return marks;
